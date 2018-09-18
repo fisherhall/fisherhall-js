@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from "react"
 import pluralize from "pluralize"
 import { Image, Item } from "semantic-ui-react"
@@ -14,6 +15,14 @@ const Series = props => {
       </Item.Content>
     </Item>
   )
+}
+
+Series.propTypes = {
+  series: PropTypes.shape({
+    imageUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    sermonCount: PropTypes.number.isRequired
+  }).isRequired
 }
 
 export default Series
