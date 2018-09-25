@@ -1,4 +1,5 @@
 import "semantic-ui-css/semantic.min.css"
+import NavBar from "../nav/nav-bar"
 import React from 'react';
 import Series from "../sermons/series"
 import SeriesList from "../sermons/series-list"
@@ -62,4 +63,9 @@ storiesOf("Series", module)
     }
 
     return <Series series={series} />
+  })
+
+storiesOf("NavBar", module)
+  .add("default state", () => {
+    return <NavBar onClick={action("clicked")} />
   })
