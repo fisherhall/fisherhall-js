@@ -1,8 +1,10 @@
+import "../styles.css"
 import "semantic-ui-css/semantic.min.css"
 import NavBar from "../nav/nav-bar"
 import React from 'react';
 import Series from "../sermons/series"
 import SeriesList from "../sermons/series-list"
+import SermonsHeader from "../sermons/sermons-header"
 import { Button, Welcome } from '@storybook/react/demo';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
@@ -68,4 +70,9 @@ storiesOf("Series", module)
 storiesOf("NavBar", module)
   .add("default state", () => {
     return <NavBar onClick={action("clicked")} />
+  })
+
+storiesOf("SermonsHeader", module)
+  .add("default state", () => {
+    return <SermonsHeader onNavBarClick={action("nav bar clicked")} />
   })

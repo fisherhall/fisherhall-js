@@ -356,3 +356,72 @@ exports[`Storyshots SeriesList with no series 1`] = `
   There are currently no series available.
 </div>
 `;
+
+exports[`Storyshots SermonsHeader default state 1`] = `
+<div
+  className="ui fluid container sermons-header"
+  style={
+    Object {
+      "backgroundImage": "url(/sermons.jpg)",
+      "backgroundSize": "cover",
+    }
+  }
+>
+  <div
+    className="ui container"
+  >
+    <div
+      className="ui secondary menu"
+    >
+      <div
+        className="item"
+        onClick={[Function]}
+      >
+        <img
+          src="/cma.png"
+          style={
+            Object {
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+      </div>
+      <div
+        className="right menu"
+      >
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Connect
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Sermons
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          About
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Sunday
+        </a>
+      </div>
+    </div>
+    <p>
+      <strong>
+        Sermons
+      </strong>
+       — Every Sunday we get together to read God’s Word (the Bible) and to talk about how what Jesus has done radically transforms our lives and our world.
+    </p>
+  </div>
+</div>
+`;
