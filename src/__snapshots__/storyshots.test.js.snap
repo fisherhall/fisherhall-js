@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots NavBar default state 1`] = `
+<div
+  className="ui secondary menu"
+>
+  <div
+    className="item"
+    onClick={[Function]}
+  >
+    <img
+      src="/cma.png"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    />
+  </div>
+  <div
+    className="right menu"
+  >
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      Connect
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      Sermons
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      About
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      Sunday
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Series with 1 sermon 1`] = `
+<div
+  className="item"
+>
+  <div
+    className="content"
+  >
+    <img
+      className="ui small bordered rounded image"
+      src="https://via.placeholder.com/300x300"
+    />
+    <strong
+      className="header"
+    >
+      My Series
+    </strong>
+    <div
+      className="meta"
+    >
+      1 sermon
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Series with 4 sermons 1`] = `
+<div
+  className="item"
+>
+  <div
+    className="content"
+  >
+    <img
+      className="ui small bordered rounded image"
+      src="https://via.placeholder.com/300x300"
+    />
+    <strong
+      className="header"
+    >
+      My Series
+    </strong>
+    <div
+      className="meta"
+    >
+      4 sermons
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Series with no sermons 1`] = `
+<div
+  className="item"
+>
+  <div
+    className="content"
+  >
+    <img
+      className="ui small bordered rounded image"
+      src="https://via.placeholder.com/300x300"
+    />
+    <strong
+      className="header"
+    >
+      My Series
+    </strong>
+    <div
+      className="meta"
+    >
+      0 sermons
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SeriesList with multiple series 1`] = `
+<div
+  className="ui doubling four column grid"
+>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 1
+      </strong>
+      <div
+        className="meta"
+      >
+        0 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 2
+      </strong>
+      <div
+        className="meta"
+      >
+        1 sermon
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 3
+      </strong>
+      <div
+        className="meta"
+      >
+        2 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 1
+      </strong>
+      <div
+        className="meta"
+      >
+        0 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 2
+      </strong>
+      <div
+        className="meta"
+      >
+        1 sermon
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 3
+      </strong>
+      <div
+        className="meta"
+      >
+        2 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 1
+      </strong>
+      <div
+        className="meta"
+      >
+        0 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 2
+      </strong>
+      <div
+        className="meta"
+      >
+        1 sermon
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 3
+      </strong>
+      <div
+        className="meta"
+      >
+        2 sermons
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <img
+        className="ui small bordered rounded image"
+        src="https://via.placeholder.com/300x300"
+      />
+      <strong
+        className="header"
+      >
+        My Series 1
+      </strong>
+      <div
+        className="meta"
+      >
+        0 sermons
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SeriesList with no series 1`] = `
+<div>
+  There are currently no series available.
+</div>
+`;
