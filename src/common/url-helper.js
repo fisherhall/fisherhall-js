@@ -5,6 +5,7 @@ const buildRoute = template => ({
 
 export const aboutRoute = buildRoute("/about")
 export const connectRoute = buildRoute("/connect")
+export const loginRoute = buildRoute("/login")
 export const sermonsRoute = buildRoute("/sermons")
 export const sundayRoute = buildRoute("/sunday")
 
