@@ -8,7 +8,7 @@ const SermonsHeader = props => {
   const { onNavBarClick } = props
 
   return (
-    <Container className="sermons-header" fluid style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}>
+    <div className="sermons-header" style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}>
       <Container>
         <NavBar onClick={onNavBarClick} />
         <p>
@@ -17,7 +17,7 @@ const SermonsHeader = props => {
           transforms our lives and our world.
         </p>
       </Container>
-    </Container>
+    </div>
   )
 }
 

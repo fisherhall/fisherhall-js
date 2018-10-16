@@ -5,6 +5,7 @@ import NavBar from "../nav/nav-bar"
 import React from 'react';
 import Series from "../sermons/series"
 import SeriesList from "../sermons/series-list"
+import Sermons from "../sermons"
 import SermonsHeader from "../sermons/sermons-header"
 import { BrowserRouter } from "react-router-dom"
 import { Button, Welcome } from '@storybook/react/demo';
@@ -84,6 +85,35 @@ storiesOf("Footer", module)
     return (
       <BrowserRouter>
         <Footer />
+      </BrowserRouter>
+    )
+  })
+
+storiesOf("Sermons", module)
+  .add("default state", () => {
+    const series = [
+      {
+        imageUrl: "https://via.placeholder.com/300x300",
+        title: "My Series 1",
+        sermonCount: 0
+      },
+      {
+        imageUrl: "https://via.placeholder.com/300x300",
+        title: "My Series 2",
+        sermonCount: 1
+      },
+      {
+        imageUrl: "https://via.placeholder.com/300x300",
+        title: "My Series 3",
+        sermonCount: 2
+      }
+    ]
+
+    const manySeries = series.concat(series).concat(series).concat(series[0])
+
+    return (
+      <BrowserRouter>
+        <Sermons onNavBarClick={action("nav bar clicked")} series={manySeries} />
       </BrowserRouter>
     )
   })
