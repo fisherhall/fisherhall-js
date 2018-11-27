@@ -1,3 +1,5 @@
+@import "../common/_variables.scss";
+
 .sermons-header {
   color: #ccc;
   font-size: 36px;
@@ -9,7 +11,7 @@
 }
 
 .sermons-header p strong {
-  color: #fff;
+  color: $white;
 }
 
 .sermons-header .ui.menu .item {

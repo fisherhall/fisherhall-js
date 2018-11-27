@@ -1,4 +1,4 @@
-import "./styles.css"
+import "./styles.scss"
 import React from "react"
 import { Container } from "semantic-ui-react"
 import { Link } from "react-router-dom"
