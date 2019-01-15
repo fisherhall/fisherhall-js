@@ -1,4 +1,4 @@
-import "../styles.scss"
+import "../App.css"
 import React from "react";
 import Series from "../sermons/series"
 import SeriesList from "../sermons/series-list"

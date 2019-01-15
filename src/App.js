@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import React, { Component } from 'react';
 import Sermons from "./sermons"
 import logo from './logo.svg';
