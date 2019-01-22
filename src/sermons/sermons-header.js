@@ -1,4 +1,3 @@
-import "./styles.scss"
 import NavBar from "../nav/nav-bar"
 import PropTypes from "prop-types"
 import React from "react"
