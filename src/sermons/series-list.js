@@ -4,8 +4,10 @@ import Series from "./series"
 import styled from "styled-components"
 import { Grid, Row, Col } from "react-flexbox-grid"
 
-const StyledSeries = styled(Series)` 
-  margin-bottom: 10px;
+const StyledSeries = styled(Series)`
+  &.ant-card {
+    margin-bottom: 10px;
+  }
 `
 
 const SeriesList = props => {

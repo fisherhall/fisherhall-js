@@ -1,3 +1,4 @@
+import "../App.css"
 import React from "react";
 import Series from "../sermons/series"
 import SeriesList from "../sermons/series-list"
@@ -7,6 +8,7 @@ import { BrowserRouter } from "react-router-dom"
 import { action } from "@storybook/addon-actions"
 import { linkTo } from "@storybook/addon-links"
 import { storiesOf } from "@storybook/react"
+
 
 storiesOf("SeriesList", module)
   .add("with no series", () => {
