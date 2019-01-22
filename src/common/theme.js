@@ -3,7 +3,8 @@ const Theme = {
     dark: {
       background: "#222123",
       primary: "#fff",
-      subtle: "rgba(255, 255, 255, .2)"
+      subtle: "#ccc",
+      verySubtle: "rgba(255, 255, 255, .2)"
     },
     light: {
     }
@@ -27,7 +28,7 @@ const Theme = {
     sm: "18px",
     md: "20px",
     lg: "25px",
-    xl: "30px"
+    xl: "40px"
   }
 }
 

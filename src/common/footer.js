@@ -21,7 +21,7 @@ const NavItem = styled.li`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: ${Theme.fontSize.sm};
-  color: ${Theme.colors.dark.subtle};
+  color: ${Theme.colors.dark.verySubtle};
 
   &:after {
     content: "/";
@@ -66,7 +66,7 @@ const UnstyledFooter = props => {
 const Footer = styled(UnstyledFooter)`
   font-size: ${Theme.fontSize.sm};
   background-color: ${Theme.colors.dark.background};
-  color: ${Theme.colors.dark.subtle};
+  color: ${Theme.colors.dark.verySubtle};
   line-height: ${Theme.lineHeight.md};
   font-size: ${Theme.fontSize.md};
   padding: ${Theme.spacing.lg} 0;
