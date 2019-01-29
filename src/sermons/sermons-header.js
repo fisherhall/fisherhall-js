@@ -1,5 +1,5 @@
 import Theme from "../common/theme.js"
-import NavBar from "../nav/nav-bar_v2"
+import NavBar from "../nav/nav-bar"
 import PropTypes from "prop-types"
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
