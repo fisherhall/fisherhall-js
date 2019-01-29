@@ -1,5 +1,5 @@
 import Theme from "../common/theme.js"
-import NavBar from "../nav/nav-bar"
+import NavBar from "../nav/nav-bar_v2"
 import PropTypes from "prop-types"
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
@@ -30,7 +30,7 @@ const SermonsHeader = props => {
       <Grid>
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
-            <NavBar onClick={onNavBarClick} />
+            <NavBar onClick={onNavBarClick} darkMode={true} />
           </Col>
         </Row>
         <Row>
