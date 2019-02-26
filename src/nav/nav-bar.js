@@ -43,7 +43,7 @@ const NavItem = styled.li`
 const NavBar = ({ darkMode }) => {
   const className = darkMode ? "dark-mode" : null
   return (
-    <nav className={className}>
+    <nav className={`navbar ${className}`}>
       <Logo src="/cma.png" />
       <NavLinks>
         <NavItem><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
