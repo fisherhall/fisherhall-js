@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Theme from "../common/theme"
 import { Link } from "react-router-dom"
 import { aboutRoute,connectRoute,sermonsRoute,sundayRoute } from "../common/url-helper"
+import {Button, Drawer, Divider } from 'antd';
 
 const ClearFix = styled.div`
   clear: both;
@@ -38,9 +39,24 @@ const NavItem = styled.li`
   float: right;
   line-height: ${Theme.lineHeight.xl};
   margin-left: ${Theme.spacing.sm};
+
+  .nav-drawer & {
+    display: block;
+    float: none;
+  }
 `
 
 const NavBar = ({ darkMode }) => {
+  const [drawerVisible, setDrawerVisible] = useState(false)
+
+  const showDrawer = () => {
+    setDrawerVisible(true)
+  }
+  
+  const onClose = () => {
+    setDrawerVisible(false)
+  }
+
   const className = darkMode ? "dark-mode" : null
   return (
     <nav className={`navbar ${className}`}>
@@ -50,8 +66,23 @@ const NavBar = ({ darkMode }) => {
         <NavItem><Link to={aboutRoute.url()}>About</Link></NavItem>
         <NavItem><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
         <NavItem><Link to={connectRoute.url()}>Connect</Link></NavItem>
+        <NavItem><Button icon="ellipsis" onClick={showDrawer}/></NavItem>
       </NavLinks>
       <ClearFix />
+      <Drawer
+        className="nav-drawer"
+        width={280}
+        placement="right"
+        closable={true}
+        onClose={onClose}
+        visible={drawerVisible}>
+        <NavLinks>
+          <NavItem><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
+          <NavItem><Link to={aboutRoute.url()}>About</Link></NavItem>
+          <NavItem><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
+          <NavItem><Link to={connectRoute.url()}>Connect</Link></NavItem>
+        </NavLinks>
+      </Drawer>
     </nav>
   )
 }
