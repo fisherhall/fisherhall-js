@@ -40,9 +40,27 @@ const NavItem = styled.li`
   line-height: ${Theme.lineHeight.xl};
   margin-left: ${Theme.spacing.sm};
 
+  .expanded {
+    display: none;
+  }
+
+  .show-drawer {
+    display: inline;
+  }
+
   .nav-drawer & {
     display: block;
     float: none;
+  }
+
+  @media (min-width: 576px) {
+    .expanded {
+      display: inline;
+    }
+
+    .show-drawer {
+      display: none;
+    }
   }
 `
 
@@ -62,11 +80,11 @@ const NavBar = ({ darkMode }) => {
     <nav className={`navbar ${className}`}>
       <Logo src="/cma.png" />
       <NavLinks>
-        <NavItem><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
-        <NavItem><Link to={aboutRoute.url()}>About</Link></NavItem>
-        <NavItem><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
-        <NavItem><Link to={connectRoute.url()}>Connect</Link></NavItem>
-        <NavItem><Button icon="ellipsis" onClick={showDrawer}/></NavItem>
+        <NavItem className="expanded"><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
+        <NavItem className="expanded"><Link to={aboutRoute.url()}>About</Link></NavItem>
+        <NavItem className="expanded"><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
+        <NavItem className="expanded"><Link to={connectRoute.url()}>Connect</Link></NavItem>
+        <NavItem className="show-drawer"><Button icon="ellipsis" onClick={showDrawer}/></NavItem>
       </NavLinks>
       <ClearFix />
       <Drawer
