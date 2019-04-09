@@ -40,11 +40,11 @@ const NavItem = styled.li`
   line-height: ${Theme.lineHeight.xl};
   margin-left: ${Theme.spacing.sm};
 
-  .expanded {
+  &.expanded {
     display: none;
   }
 
-  .show-drawer {
+  &.show-drawer {
     display: inline;
   }
 
@@ -54,11 +54,11 @@ const NavItem = styled.li`
   }
 
   @media (min-width: 576px) {
-    .expanded {
+    &.expanded {
       display: inline;
     }
 
-    .show-drawer {
+    &.show-drawer {
       display: none;
     }
   }
