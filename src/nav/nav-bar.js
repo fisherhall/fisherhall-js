@@ -16,7 +16,7 @@ const Logo = styled.img`
 `
 
 const NavLinks = styled.ul`
-  a {
+  a, .ghost-button {
     color: ${Theme.colors.light.primary}
   }
 
@@ -25,7 +25,7 @@ const NavLinks = styled.ul`
   }
 
   .dark-mode & {
-    a { 
+    a, .ghost-button { 
       color: ${Theme.colors.dark.primary}
     }
 
@@ -107,7 +107,7 @@ const NavBar = ({ darkMode }) => {
 
 const GhostButton  = ({ icon, onClick, className }) => {
   return(
-    <div className={className} onClick={onClick}>
+    <div className={`ghost-button ${className}`} onClick={onClick}>
       <Icon type={icon} />
     </div>
   )
