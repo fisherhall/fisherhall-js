@@ -10,7 +10,11 @@ import { storiesOf } from '@storybook/react';
 
 storiesOf("NavBar", module)
   .add("default state", () => {
-    return <NavBar onClick={action("clicked")} />
+    return (
+      <BrowserRouter>
+        <NavBar onClick={action("clicked")} />
+      </BrowserRouter>
+    )
   })
 
 storiesOf("Footer", module)

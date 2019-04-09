@@ -30,7 +30,7 @@ const SermonsHeader = props => {
       <Grid>
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
-            <NavBar onClick={onNavBarClick} />
+            <NavBar onClick={onNavBarClick} darkMode={true} />
           </Col>
         </Row>
         <Row>

@@ -7,6 +7,7 @@ const Theme = {
       verySubtle: "rgba(255, 255, 255, .2)"
     },
     light: {
+      primary: "#000"
     }
   },
   spacing: {

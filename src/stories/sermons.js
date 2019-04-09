@@ -81,7 +81,11 @@ storiesOf("Series", module)
 
 storiesOf("SermonsHeader", module)
   .add("default state", () => {
-    return <SermonsHeader onNavBarClick={action("nav bar clicked")} />
+    return (
+      <BrowserRouter>
+        <SermonsHeader onNavBarClick={action("nav bar clicked")} />
+      </BrowserRouter>
+    )
   })
 
 storiesOf("Sermons", module)
