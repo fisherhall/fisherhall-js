@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Theme from "../common/theme"
 import { Link } from "react-router-dom"
 import { aboutRoute,connectRoute,sermonsRoute,sundayRoute } from "../common/url-helper"
-import {Button, Drawer, Divider } from 'antd';
+import {Button, Drawer, Divider, Icon } from 'antd';
 
 const ClearFix = styled.div`
   clear: both;
@@ -84,7 +84,7 @@ const NavBar = ({ darkMode }) => {
         <NavItem className="expanded"><Link to={aboutRoute.url()}>About</Link></NavItem>
         <NavItem className="expanded"><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
         <NavItem className="expanded"><Link to={connectRoute.url()}>Connect</Link></NavItem>
-        <NavItem className="show-drawer"><Button icon="ellipsis" onClick={showDrawer}/></NavItem>
+        <NavItem className="show-drawer"><StyledGhostButton icon="ellipsis" onClick={showDrawer}/></NavItem>
       </NavLinks>
       <ClearFix />
       <Drawer
@@ -104,5 +104,19 @@ const NavBar = ({ darkMode }) => {
     </nav>
   )
 }
+
+const GhostButton  = ({ icon, onClick, className }) => {
+  return(
+    <div className={className} onClick={onClick}>
+      <Icon type={icon} />
+    </div>
+  )
+}
+
+const StyledGhostButton = styled(GhostButton)`
+  cursor : pointer;
+  padding: 0 ${Theme.spacing.sm};
+
+`
 
 export default NavBar
