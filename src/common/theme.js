@@ -22,7 +22,8 @@ const Theme = {
     sm: "12px",
     md: "14px",
     lg: "18px",
-    xl: "24px"
+    xl: "24px",
+    xxl: "48px"
   },
   lineHeight: {
     xs: "10px",
