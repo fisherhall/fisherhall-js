@@ -2,11 +2,16 @@ import NavBar from "../nav/nav-bar"
 import React from "react"
 import Theme from "../common/theme"
 import styled from "styled-components"
-import { Button } from "antd"
+import { Button, Modal} from "antd"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Footer from "../common/footer"
 
-const LandingPage = ({ className, groups }) => {
+
+const LandingPage = ({ className, groups, alert }) => {
+  if (alert){
+    Modal.warning({ content: alert})
+  
+  }
   return (
     <div className={className}>
       <div className="cover">
@@ -51,7 +56,6 @@ const LandingPage = ({ className, groups }) => {
       </div>
       <Footer/>
     </div>
-    
   )
 }
 
