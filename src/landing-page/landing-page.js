@@ -4,6 +4,7 @@ import Theme from "../common/theme"
 import styled from "styled-components"
 import { Button } from "antd"
 import { Grid, Row, Col } from "react-flexbox-grid"
+import Footer from "../common/footer"
 
 
 
@@ -38,6 +39,38 @@ const LandingPage = ({ className }) => {
           </Row>
         </Grid>
       </div>
+      <div className="groups">
+        <Grid>
+          <Row>
+            <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
+              <p>Want to know more about our church? Check out some of the groups within our church that may interest you.</p>
+            
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={4}>
+              <div className="group">
+                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
+                <p>45th Anniversary</p>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <div className="group">
+                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
+                <p>45th Anniversary</p>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <div className="group">
+                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
+                <p>45th Anniversary</p>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
+      
+      </div>
+      <Footer/>
     </div>
     
   )
@@ -50,13 +83,22 @@ const StyledLandingPage = styled(LandingPage)`
     background-size: cover;
     text-align: center;
     padding-bottom: ${Theme.spacing.lg};
-
+ 
     h1 {
       color: ${Theme.colors.dark.primary};
+      font-family: 'Lato', sans-serif;
       font-size: ${Theme.fontSize.xxl};
       font-weight: bold;
       padding: ${Theme.spacing.lg} 0 ${Theme.spacing.md};
-      font-family: 'Lato', sans-serif;
+    }
+  }
+  
+  .groups {
+    padding: ${Theme.spacing.lg} 0 ${Theme.spacing.lg};
+    text-align: center;
+    .group {
+    
+      text-align: center;
     }
   }
 
