@@ -3,15 +3,30 @@ import React from "react"
 import Theme from "../common/theme"
 import styled from "styled-components"
 import { Button } from "antd"
+import { Grid, Row, Col } from "react-flexbox-grid"
+
+
 
 const LandingPage = ({ className }) => {
   return (
     <div className={className}>
-      <NavBar darkMode />
-      <h1>
-        Loved, Loving.
-      </h1>
-      <Button ghost>View our latest bulletin</Button>
+      <Grid>
+        <Row>
+          <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
+            <NavBar darkMode />
+          </Col>
+        </Row>
+        <Row>
+          <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
+
+            <h1>
+              Loved, Loving.
+            </h1>
+        
+            <Button ghost>View our latest bulletin</Button>
+          </Col>
+        </Row>
+      </Grid>
     </div>
   )
 }
