@@ -6,9 +6,7 @@ import { Button } from "antd"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Footer from "../common/footer"
 
-
-
-const LandingPage = ({ className }) => {
+const LandingPage = ({ className, groups }) => {
   return (
     <div className={className}>
       <div className="cover">
@@ -44,37 +42,28 @@ const LandingPage = ({ className }) => {
           <Row>
             <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
               <p>Want to know more about our church? Check out some of the groups within our church that may interest you.</p>
-            
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={4}>
-              <div className="group">
-                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
-                <p>45th Anniversary</p>
-              </div>
-            </Col>
-            <Col xs={12} md={4}>
-              <div className="group">
-                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
-                <p>45th Anniversary</p>
-              </div>
-            </Col>
-            <Col xs={12} md={4}>
-              <div className="group">
-                <img src="https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/https://mcac.s3.amazonaws.com/groups/90dbc5af-c2b0-459e-bc58-898c2d1defee.jpg"/>
-                <p>45th Anniversary</p>
-              </div>
-            </Col>
+            {groups.map(group => <Col xs={12} md={4}><Group group={group} /></Col>)}
           </Row>
         </Grid>
-      
       </div>
       <Footer/>
     </div>
     
   )
 }
+
+const Group = ({ group }) => {
+  return (
+    <div className="group">
+      <img src={`https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/${group.bannerUrl}`}/>
+      <p>{group.name}</p>
+    </div>
+  )
+}
+
 
 const StyledLandingPage = styled(LandingPage)`
 
