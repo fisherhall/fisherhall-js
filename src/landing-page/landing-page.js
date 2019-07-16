@@ -21,14 +21,14 @@ const LandingPage = ({ className, groups, alert }) => {
               <NavBar darkMode />
             </Col>
           </Row>
-          <Row className="content">
-            <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
+          <div className="content">
+            <div>
               <h1>
                 Loved, Loving.
               </h1>
               <Button ghost>View our latest bulletin</Button>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Grid>
       </div>
       <div className="mission-statement">
