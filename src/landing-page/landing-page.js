@@ -107,9 +107,12 @@ const StyledLandingPage = styled(LandingPage)`
     font-size: ${Theme.fontSize.lg};
     padding:  ${Theme.spacing.lg} 0 ${Theme.spacing.lg};
     text-align: center;
-    
+  }
 
-
+  @media (min-width: 576px) {
+    .cover h1 {
+      font-size: 75px;
+    }
   }
 `
 
