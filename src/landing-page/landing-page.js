@@ -23,11 +23,9 @@ const LandingPage = ({ className, groups, alert }) => {
           </Row>
           <Row className="content">
             <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
-
               <h1>
                 Loved, Loving.
               </h1>
-          
               <Button ghost>View our latest bulletin</Button>
             </Col>
           </Row>
@@ -68,11 +66,17 @@ const Group = ({ group }) => {
   )
 }
 
-
 const StyledLandingPage = styled(LandingPage)`
+  .container {
+    height: 100%;
+  }
 
-
-
+  .content {
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
   .cover {
     background-image: url("/landing.jpg");
     background-size: cover;
@@ -80,14 +84,6 @@ const StyledLandingPage = styled(LandingPage)`
     text-align: center;
     padding-bottom: ${Theme.spacing.lg};
 
-    .content {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-    
- 
     h1 {
       color: ${Theme.colors.dark.primary};
       font-family: 'Lato', sans-serif;
