@@ -21,7 +21,7 @@ const LandingPage = ({ className, groups, alert }) => {
               <NavBar darkMode />
             </Col>
           </Row>
-          <Row>
+          <Row className="content">
             <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
 
               <h1>
@@ -71,18 +71,29 @@ const Group = ({ group }) => {
 
 const StyledLandingPage = styled(LandingPage)`
 
+
+
   .cover {
     background-image: url("/landing.jpg");
     background-size: cover;
+    height:100vh;
     text-align: center;
     padding-bottom: ${Theme.spacing.lg};
+
+    .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+    
  
     h1 {
       color: ${Theme.colors.dark.primary};
       font-family: 'Lato', sans-serif;
       font-size: ${Theme.fontSize.xxl};
       font-weight: bold;
-      padding: ${Theme.spacing.lg} 0 ${Theme.spacing.md};
+      margin-bottom: ${Theme.spacing.md};
     }
   }
   
