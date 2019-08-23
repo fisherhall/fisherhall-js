@@ -2,15 +2,13 @@ import NavBar from "../nav/nav-bar"
 import React from "react"
 import Theme from "../common/theme"
 import styled from "styled-components"
-import { Button, Modal} from "antd"
+import { Button, Modal } from "antd"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Footer from "../common/footer"
 
-
 const LandingPage = ({ className, groups, alert }) => {
-  if (alert){
-    Modal.warning({ content: alert})
-  
+  if (alert) {
+    Modal.warning({ content: alert })
   }
   return (
     <div className={className}>
@@ -23,9 +21,7 @@ const LandingPage = ({ className, groups, alert }) => {
           </Row>
           <div className="content">
             <div>
-              <h1>
-                Loved, Loving.
-              </h1>
+              <h1>Loved, Loving.</h1>
               <Button ghost>View our latest bulletin</Button>
             </div>
           </div>
@@ -35,7 +31,14 @@ const LandingPage = ({ className, groups, alert }) => {
         <Grid>
           <Row>
             <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
-              <p>As a congregation of the Montreal Chinese Alliance Church we believe <strong>because God loves us, we will love Jesus, love His people, and love the world, for Jesus' sake.</strong></p>
+              <p>
+                As a congregation of the Montreal Chinese Alliance Church we
+                believe{" "}
+                <strong>
+                  because God loves us, we will love Jesus, love His people, and
+                  love the world, for Jesus' sake.
+                </strong>
+              </p>
             </Col>
           </Row>
         </Grid>
@@ -44,15 +47,22 @@ const LandingPage = ({ className, groups, alert }) => {
         <Grid>
           <Row>
             <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
-              <p>Want to know more about our church? Check out some of the groups within our church that may interest you.</p>
+              <p>
+                Want to know more about our church? Check out some of the groups
+                within our church that may interest you.
+              </p>
             </Col>
           </Row>
           <Row>
-            {groups.map(group => <Col xs={12} md={4}><Group group={group} /></Col>)}
+            {groups.map(group => (
+              <Col xs={12} md={4}>
+                <Group group={group} />
+              </Col>
+            ))}
           </Row>
         </Grid>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
@@ -60,7 +70,9 @@ const LandingPage = ({ className, groups, alert }) => {
 const Group = ({ group }) => {
   return (
     <div className="group">
-      <img src={`https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/${group.bannerUrl}`}/>
+      <img
+        src={`https://res.cloudinary.com/fisher-hall-dev/image/fetch/c_fill,h_200,r_max,w_200/${group.bannerUrl}`}
+      />
       <p>{group.name}</p>
     </div>
   )
@@ -73,31 +85,30 @@ const StyledLandingPage = styled(LandingPage)`
 
   .content {
     height: 100%;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
   .cover {
     background-image: url("/landing.jpg");
     background-size: cover;
-    height:100vh;
+    height: 100vh;
     text-align: center;
     padding-bottom: ${Theme.spacing.lg};
 
     h1 {
       color: ${Theme.colors.dark.primary};
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: ${Theme.fontSize.xxl};
       font-weight: bold;
       margin-bottom: ${Theme.spacing.md};
     }
   }
-  
+
   .groups {
     padding: ${Theme.spacing.lg} 0 ${Theme.spacing.lg};
     text-align: center;
     .group {
-    
       text-align: center;
     }
   }
@@ -105,7 +116,7 @@ const StyledLandingPage = styled(LandingPage)`
   .mission-statement {
     background-color: ${Theme.colors.light.subtle};
     font-size: ${Theme.fontSize.lg};
-    padding:  ${Theme.spacing.lg} 0 ${Theme.spacing.lg};
+    padding: ${Theme.spacing.lg} 0 ${Theme.spacing.lg};
     text-align: center;
   }
 
@@ -117,4 +128,3 @@ const StyledLandingPage = styled(LandingPage)`
 `
 
 export default StyledLandingPage
-
