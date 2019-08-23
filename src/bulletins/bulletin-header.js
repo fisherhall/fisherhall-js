@@ -1,5 +1,5 @@
 import React from "react"
-import {Grid, Row, Col} from "react-flexbox-grid"
+import { Grid, Row, Col } from "react-flexbox-grid"
 import NavBar from "../nav/nav-bar"
 import styled from "styled-components"
 import Theme from "../common/theme"
@@ -10,11 +10,11 @@ const Container = styled.div`
     font-size: ${Theme.fontSize.lg};
     line-height: ${Theme.lineHeight.lg};
     padding: ${Theme.spacing.md} 0 ${Theme.spacing.lg} 0;
-  
+
     strong {
       color: ${Theme.colors.dark.primary};
     }
-  
+
     @media (min-width: 576px) {
       font-size: ${Theme.fontSize.xl};
       line-height: ${Theme.lineHeight.xl};
@@ -25,7 +25,10 @@ const Container = styled.div`
 
 const BulletinHeader = ({ bulletin, onNavBarClick, className }) => {
   return (
-    <Container className={className} style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}>
+    <Container
+      className={className}
+      style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}
+    >
       <Grid>
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
@@ -35,7 +38,8 @@ const BulletinHeader = ({ bulletin, onNavBarClick, className }) => {
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={6}>
             <div className="description">
-              <strong>{bulletin.name}</strong> — Worship with us every Sunday typically at 9:30AM.
+              <strong>{bulletin.name}</strong> — Worship with us every Sunday
+              typically at 9:30AM.
             </div>
           </Col>
         </Row>
@@ -43,4 +47,4 @@ const BulletinHeader = ({ bulletin, onNavBarClick, className }) => {
     </Container>
   )
 }
-export default BulletinHeader;
+export default BulletinHeader

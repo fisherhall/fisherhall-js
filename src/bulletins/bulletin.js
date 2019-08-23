@@ -15,7 +15,7 @@ const Container = styled.div`
     ul {
       list-style-type: none;
     }
-    
+
     strong {
       font-size: ${Theme.fontSize.xl};
     }
@@ -26,11 +26,10 @@ const Container = styled.div`
   }
 `
 
-const Bulletin = ({className, bulletin}) => {
-
+const Bulletin = ({ className, bulletin }) => {
   return (
     <Container className={className}>
-      <BulletinHeader bulletin={bulletin}/>
+      <BulletinHeader bulletin={bulletin} />
       <Grid>
         <Row>
           <Col xs={12}>
@@ -42,7 +41,7 @@ const Bulletin = ({className, bulletin}) => {
   )
 }
 
-const ServiceOrder = ({bulletin}) => {
+const ServiceOrder = ({ bulletin }) => {
   return (
     <div className="service-order">
       <ReactMarkdown source={bulletin.serviceOrder} />
