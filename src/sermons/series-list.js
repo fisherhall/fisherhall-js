@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Series from "./series" 
+import Series from "./series"
 import styled from "styled-components"
 import { Grid, Row, Col } from "react-flexbox-grid"
 
@@ -31,7 +31,7 @@ const SeriesList = props => {
 }
 
 SeriesList.propTypes = {
-  series: PropTypes.arrayOf(Series.propTypes.series).isRequired
+  series: PropTypes.arrayOf(Series.propTypes.series).isRequired,
 }
 
 export default SeriesList

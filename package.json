@@ -4,18 +4,19 @@
   "private": true,
   "dependencies": {
     "antd": "^3.10",
-    "latest": "^0.2.0",
-    "pluralize": "^7.0.0",
-    "prop-types": "^15.6.2",
-    "react": "16.8.0",
-    "react-dom": "16.8.0",
-    "react-flexbox-grid": "^2.1.2",
+    "latest": "^0.2",
+    "pluralize": "^7.0",
+    "precise-commits": "^1.0.2",
+    "prop-types": "^15.6",
+    "react": "16.8",
+    "react-dom": "16.8",
+    "react-flexbox-grid": "^2.1",
+    "react-router-dom": "^4.3",
     "react-markdown": "^4.1.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1",
-    "semantic-ui-css": "^2.3.3",
-    "semantic-ui-react": "^0.82.4",
-    "styled-components": "^4.1.1"
+    "react-scripts": "^2.1",
+    "semantic-ui-css": "^2.3",
+    "semantic-ui-react": "^0.82",
+    "styled-components": "^4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,22 +24,31 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "format": "yarn prettier --write",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\""
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^4.1",
-    "@storybook/addon-links": "^4.1",
-    "@storybook/addon-storyshots": "^4.1",
-    "@storybook/addons": "^4.1",
-    "@storybook/react": "^4.1",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
-    "react-test-renderer": "^16.5.2"
+    "@storybook/addon-actions": "^5.1",
+    "@storybook/addon-links": "^5.1",
+    "@storybook/addon-storyshots": "^5.1",
+    "@storybook/addons": "^5.1",
+    "@storybook/react": "^5.1",
+    "babel-core": "^6.26",
+    "babel-runtime": "^6.26",
+    "husky": "^3.0",
+    "prettier": "^1.18",
+    "react-test-renderer": "^16.5"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
+  }
 }
