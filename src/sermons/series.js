@@ -9,7 +9,10 @@ const Series = props => {
   const { series, className } = props
 
   return (
-    <Card className={className} cover={<img src={series.imageUrl} alt="Sermon Series" />}>
+    <Card
+      className={className}
+      cover={<img src={series.imageUrl} alt="Sermon Series" />}
+    >
       <Meta
         title={series.title}
         description={pluralize("sermon", series.sermonCount, true)}
@@ -23,8 +26,8 @@ Series.propTypes = {
   series: PropTypes.shape({
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    sermonCount: PropTypes.number.isRequired
-  }).isRequired
+    sermonCount: PropTypes.number.isRequired,
+  }).isRequired,
 }
 
 export default Series

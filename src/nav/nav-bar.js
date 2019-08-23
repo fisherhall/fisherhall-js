@@ -2,8 +2,13 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Theme from "../common/theme"
 import { Link } from "react-router-dom"
-import { aboutRoute,connectRoute,sermonsRoute,sundayRoute } from "../common/url-helper"
-import {Button, Drawer, Divider, Icon } from 'antd';
+import {
+  aboutRoute,
+  connectRoute,
+  sermonsRoute,
+  sundayRoute,
+} from "../common/url-helper"
+import { Button, Drawer, Divider, Icon } from "antd"
 
 const ClearFix = styled.div`
   clear: both;
@@ -16,21 +21,23 @@ const Logo = styled.img`
 `
 
 const NavLinks = styled.ul`
-  a, .ghost-button {
-    color: ${Theme.colors.light.primary}
+  a,
+  .ghost-button {
+    color: ${Theme.colors.light.primary};
   }
 
   a:hover {
-    color: ${Theme.colors.light.subtle}
+    color: ${Theme.colors.light.subtle};
   }
 
   .dark-mode & {
-    a, .ghost-button { 
-      color: ${Theme.colors.dark.primary}
+    a,
+    .ghost-button {
+      color: ${Theme.colors.dark.primary};
     }
 
     a:hover {
-      color: ${Theme.colors.dark.subtle}
+      color: ${Theme.colors.dark.subtle};
     }
   }
 `
@@ -70,7 +77,7 @@ const NavBar = ({ darkMode }) => {
   const showDrawer = () => {
     setDrawerVisible(true)
   }
-  
+
   const onClose = () => {
     setDrawerVisible(false)
   }
@@ -80,11 +87,21 @@ const NavBar = ({ darkMode }) => {
     <nav className={`navbar ${className}`}>
       <Logo src="/cma.png" />
       <NavLinks>
-        <NavItem className="expanded"><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
-        <NavItem className="expanded"><Link to={aboutRoute.url()}>About</Link></NavItem>
-        <NavItem className="expanded"><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
-        <NavItem className="expanded"><Link to={connectRoute.url()}>Connect</Link></NavItem>
-        <NavItem className="show-drawer"><StyledGhostButton icon="ellipsis" onClick={showDrawer}/></NavItem>
+        <NavItem className="expanded">
+          <Link to={sundayRoute.url()}>Sunday</Link>
+        </NavItem>
+        <NavItem className="expanded">
+          <Link to={aboutRoute.url()}>About</Link>
+        </NavItem>
+        <NavItem className="expanded">
+          <Link to={sermonsRoute.url()}>Sermons</Link>
+        </NavItem>
+        <NavItem className="expanded">
+          <Link to={connectRoute.url()}>Connect</Link>
+        </NavItem>
+        <NavItem className="show-drawer">
+          <StyledGhostButton icon="ellipsis" onClick={showDrawer} />
+        </NavItem>
       </NavLinks>
       <ClearFix />
       <Drawer
@@ -93,20 +110,29 @@ const NavBar = ({ darkMode }) => {
         placement="right"
         closable={true}
         onClose={onClose}
-        visible={drawerVisible}>
+        visible={drawerVisible}
+      >
         <NavLinks>
-          <NavItem><Link to={sundayRoute.url()}>Sunday</Link></NavItem>
-          <NavItem><Link to={aboutRoute.url()}>About</Link></NavItem>
-          <NavItem><Link to={sermonsRoute.url()}>Sermons</Link></NavItem>
-          <NavItem><Link to={connectRoute.url()}>Connect</Link></NavItem>
+          <NavItem>
+            <Link to={sundayRoute.url()}>Sunday</Link>
+          </NavItem>
+          <NavItem>
+            <Link to={aboutRoute.url()}>About</Link>
+          </NavItem>
+          <NavItem>
+            <Link to={sermonsRoute.url()}>Sermons</Link>
+          </NavItem>
+          <NavItem>
+            <Link to={connectRoute.url()}>Connect</Link>
+          </NavItem>
         </NavLinks>
       </Drawer>
     </nav>
   )
 }
 
-const GhostButton  = ({ icon, onClick, className }) => {
-  return(
+const GhostButton = ({ icon, onClick, className }) => {
+  return (
     <div className={`ghost-button ${className}`} onClick={onClick}>
       <Icon type={icon} />
     </div>
@@ -114,9 +140,8 @@ const GhostButton  = ({ icon, onClick, className }) => {
 }
 
 const StyledGhostButton = styled(GhostButton)`
-  cursor : pointer;
+  cursor: pointer;
   padding: 0 ${Theme.spacing.sm};
-
 `
 
 export default NavBar

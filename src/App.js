@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 import Sermons from "./sermons"
-import logo from './logo.svg';
+import logo from "./logo.svg"
 import { BrowserRouter } from "react-router-dom"
 
 class App extends Component {
@@ -9,8 +9,8 @@ class App extends Component {
       <BrowserRouter>
         <Sermons series={[]} onNavBarClick={() => {}} />
       </BrowserRouter>
-    );
+    )
   }
 }
 
-export default App;
+export default App

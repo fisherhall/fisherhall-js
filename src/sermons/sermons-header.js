@@ -26,7 +26,10 @@ const SermonsHeader = props => {
   const { onNavBarClick } = props
 
   return (
-    <div className="sermons-header" style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}>
+    <div
+      className="sermons-header"
+      style={{ backgroundImage: "url(/sermons.jpg)", backgroundSize: "cover" }}
+    >
       <Grid>
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={8}>
@@ -36,9 +39,9 @@ const SermonsHeader = props => {
         <Row>
           <Col xsOffset={1} xs={10} mdOffset={2} md={6}>
             <Description>
-              <strong>Sermons</strong> — Every Sunday we get together to read God’s
-              Word (the Bible) and to talk about how what Jesus has done radically
-              transforms our lives and our world.
+              <strong>Sermons</strong> — Every Sunday we get together to read
+              God’s Word (the Bible) and to talk about how what Jesus has done
+              radically transforms our lives and our world.
             </Description>
           </Col>
         </Row>
@@ -48,7 +51,7 @@ const SermonsHeader = props => {
 }
 
 SermonsHeader.propTypes = {
-  onNavBarClick: PropTypes.func.isRequired
+  onNavBarClick: PropTypes.func.isRequired,
 }
 
 export default SermonsHeader
