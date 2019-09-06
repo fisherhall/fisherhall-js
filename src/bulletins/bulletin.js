@@ -24,6 +24,10 @@ const Container = styled.div`
       margin-top: ${Theme.spacing.md};
     }
   }
+
+  .announcements {
+    margin: ${Theme.spacing.xl} 0;
+  }
 `
 
 const Bulletin = ({ className, bulletin }) => {
@@ -33,7 +37,12 @@ const Bulletin = ({ className, bulletin }) => {
       <Grid>
         <Row>
           <Col xs={12}>
-            <ServiceOrder bulletin={bulletin} />
+            <ServiceOrder serviceOrder={bulletin.serviceOrder} />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <Announcements announcements={bulletin.announcements} />
           </Col>
         </Row>
       </Grid>
@@ -41,10 +50,24 @@ const Bulletin = ({ className, bulletin }) => {
   )
 }
 
-const ServiceOrder = ({ bulletin }) => {
+const ServiceOrder = ({ serviceOrder }) => {
   return (
     <div className="service-order">
-      <ReactMarkdown source={bulletin.serviceOrder} />
+      <ReactMarkdown source={serviceOrder} />
+    </div>
+  )
+}
+
+const Announcements = ({ announcements }) => {
+  return (
+    <div className="announcements">
+      <ol>
+        {announcements.map(announcement => (
+          <li>
+            <ReactMarkdown source={announcement.content} />
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
