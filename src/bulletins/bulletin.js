@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../common/footer"
 import BulletinHeader from "./bulletin-header"
 import styled from "styled-components"
 import { Typography } from "antd"
@@ -14,6 +15,7 @@ const Container = styled.div`
 
     ul {
       list-style-type: none;
+      padding: 0;
     }
 
     strong {
@@ -27,6 +29,14 @@ const Container = styled.div`
 
   .announcements {
     margin: ${Theme.spacing.xl} 0;
+
+    li > p {
+      margin: 0;
+    }
+
+    ul > li {
+      padding-bottom: ${Theme.spacing.xs};
+    }
   }
 `
 
@@ -46,6 +56,7 @@ const Bulletin = ({ className, bulletin }) => {
           </Col>
         </Row>
       </Grid>
+      <Footer />
     </Container>
   )
 }

@@ -12,7 +12,8 @@ const Theme = {
     },
   },
   spacing: {
-    xs: "2px",
+    xxs: "2px",
+    xs: "10px",
     sm: "20px",
     md: "40px",
     lg: "60px",
