@@ -50,10 +50,17 @@ storiesOf("Bulletin", module).add("default state", () => {
         id: 2,
         content: `**MISSIONS:**
  - **STM Madrid:** $1321 was raised from last week’s Bake Sale. Thank you for everyone’s support. Please continue to pray for Pastor Marshall's passport!
+ - **STM Madrid:** $1321 was raised from last week’s Bake Sale. Thank you for everyone’s support. Please continue to pray for Pastor Marshall's passport!
+ - **STM Madrid:** $1321 was raised from last week’s Bake Sale. Thank you for everyone’s support. Please continue to pray for Pastor Marshall's passport!
       `,
       },
       {
         id: 3,
+        content:
+          "[**Kairos Course**](http://kairoscourse.org/courses) is designed to educate, inspire and challenge Christians to engage in world Christian mission. It focuses on 4 dimensions of mission: Biblical, Historical, Strategic and Cultural. A new course is going to be offered in November (12, 14, 16, 26 & 30) at [Laval Christian Fellowship](https://lavalchristianfellowship.com). For more info & registration, click [here](http://kairoscourse.org/courses).",
+      },
+      {
+        id: 4,
         content:
           "[**Kairos Course**](http://kairoscourse.org/courses) is designed to educate, inspire and challenge Christians to engage in world Christian mission. It focuses on 4 dimensions of mission: Biblical, Historical, Strategic and Cultural. A new course is going to be offered in November (12, 14, 16, 26 & 30) at [Laval Christian Fellowship](https://lavalchristianfellowship.com). For more info & registration, click [here](http://kairoscourse.org/courses).",
       },

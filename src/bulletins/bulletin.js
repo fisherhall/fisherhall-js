@@ -30,12 +30,20 @@ const Container = styled.div`
   .announcements {
     margin: ${Theme.spacing.xl} 0;
 
+    ol, ul {
+      padding-inline-start: ${Theme.spacing.sm};
+    }
+
     li > p {
       margin: 0;
     }
 
-    ul > li {
-      padding-bottom: ${Theme.spacing.xs};
+    li {
+      margin-bottom: ${Theme.spacing.sm};
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 `
