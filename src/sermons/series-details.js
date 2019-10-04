@@ -9,7 +9,7 @@ import Theme from "../common/theme"
 
 const { Title } = Typography
 
-const Container = styled.div`
+export const Container = styled.div`
   .info {
     margin-bottom: ${Theme.spacing.lg};
   }
@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `
 
-const SeriesInfo = ({ series }) => {
+export const SeriesInfo = ({ series }) => {
   return (
     <div className="info">
       <div

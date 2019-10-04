@@ -9,6 +9,8 @@ import { action } from "@storybook/addon-actions"
 import { linkTo } from "@storybook/addon-links"
 import { storiesOf } from "@storybook/react"
 import Sermon from "../sermons/sermon"
+import { Container, SeriesInfo } from "../sermons/series-details"
+import { Grid, Row, Col } from "react-flexbox-grid"
 
 storiesOf("SeriesList", module)
   .add("with no series", () => {
@@ -136,5 +138,30 @@ storiesOf("Sermons/Sermon", module).add("default state", () => {
     tags: [],
   }
 
-  return <Sermon sermon={sermon} />
+  const series = {
+    id: "1",
+    description: "This is a test series",
+    createdAt: "2019-07-21T13:30:00+00:00",
+    name: "Test Series",
+    sermons: [
+      { id: "1", name: "Test Sermon 1", speaker: ["Test Speaker"] },
+      { id: "2", name: "Test Sermon 2", speaker: ["Test Speaker"] },
+      { id: "3", name: "Test Sermon 3", speaker: ["Test Speaker"] },
+    ],
+  }
+
+  return (
+    <Container>
+      <Grid>
+        <Row>
+          <Col xs={12} md={4}>
+            <SeriesInfo series={series} />
+          </Col>
+          <Col xs={12} md={8}>
+            <Sermon sermon={sermon} />
+          </Col>
+        </Row>
+      </Grid>
+    </Container>
+  )
 })
