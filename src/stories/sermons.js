@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom"
 import { action } from "@storybook/addon-actions"
 import { linkTo } from "@storybook/addon-links"
 import { storiesOf } from "@storybook/react"
+import Sermon from "../sermons/sermon"
 
 storiesOf("SeriesList", module)
   .add("with no series", () => {
@@ -118,4 +119,22 @@ storiesOf("Sermons", module).add("default state", () => {
       <Sermons onNavBarClick={action("nav bar clicked")} series={manySeries} />
     </BrowserRouter>
   )
+})
+
+storiesOf("Sermons/Sermon", module).add("default state", () => {
+  const sermon = {
+    id: "1",
+    audioUrl:
+      "https://mcac.s3.amazonaws.com/bulletins/728f70ca-74ca-4aa4-84a5-18c963726d70.mp3",
+    bannerUrl: null,
+    name: "Connected Spirituality: Don't go at it alone!",
+    notes:
+      "Jesus never stopped talking about the Holy Spirit.↵↵Luke’s writings: Luke & Acts↵↵[The Holy Spirit is the mediator](https://www.bible.com/100/luk.1.35.nasb)↵↵Where the Holy Spirit moves, the unexpected happens.↵↵[Jesus himself is baptized, anointed, by the Holy Spirit](https://www.bible.com/59/luk.3.22.esv)↵↵The presence of the Holy Spirit is a reminder how much Jesus is loved by the Father.↵↵[Jesus baptizes his followers with the Holy Spirit.](https://www.bible.com/59/luk.3.15-16.esv)↵↵And Jesus, **full of the Holy Spirit**, returned from the Jordan and was **led by the Spirit** in the wilderness for forty days, being tempted by the devil. And he ate nothing during those days. And when they were ended, he was hungry. ‭‭[Luke‬ ‭4:1-2‬ ‭ESV‬‬](https://www.bible.com/59/luk.4.1-2.esv)↵↵Jesus does not move alone. [He is always accompanied by the Holy Spirit.](https://www.bible.com/59/luk.4.14.esv)↵↵[Jesus’ first words in Acts:](https://www.bible.com/59/luk.4.18.esv) The Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor.↵↵Search me, O God, and know my heart! Try me and know my thoughts! And see if there be any grievous way in me, and lead me in the way everlasting! [Psalms‬ ‭139:23-24‬ ‭ESV‬‬](https://www.bible.com/59/ psa.139.23-24.esv)",
+    publishedAt: "2019-09-29T13:30:00+00:00",
+    series: null,
+    speaker: "Dr. Jean Martin",
+    tags: [],
+  }
+
+  return <Sermon sermon={sermon} />
 })
